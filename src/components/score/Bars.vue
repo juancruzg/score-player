@@ -1,31 +1,31 @@
 <template lang="html">
     <lines>
         <ul slot="first-line">
-            <li v-for="(note, index) in notes[0]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[0]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="first-space">
-            <li v-for="(note, index) in notes[1]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[1]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="second-line">
-            <li v-for="(note, index) in notes[2]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[2]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="second-space">
-            <li v-for="(note, index) in notes[3]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[3]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="third-line">
-            <li v-for="(note, index) in notes[4]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[4]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="third-space">
-            <li v-for="(note, index) in notes[5]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[5]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="fourth-line">
-            <li v-for="(note, index) in notes[6]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[6]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="fourth-space">
-            <li v-for="(note, index) in notes[7]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[7]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
         <ul slot="fifth-line">
-            <li v-for="(note, index) in notes[8]" v-bind:key="index" v-bind:class="{ 'note': note }"></li>
+            <li v-for="(note, index) in notes[8]" v-bind:key="index" :class="addClass(note)"></li>
         </ul>
     </lines>
 </template>
@@ -55,11 +55,20 @@ export default {
             let chordsArray = bars.getChordsAsArray();
             let vm = this;
 
-            chordsArray.forEach((arr, index) => {
+            chordsArray.forEach(arr => {
                 arr.forEach((note, index) => {
                     vm.notes[index].push(note);
                 });
             });
+        },
+        addClass(note) {
+            if (!note)
+                return "";
+
+            if (!note.figure)
+                return "note";
+
+            return "note " + note.figure;
         }
     },
     mounted() {

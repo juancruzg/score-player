@@ -29,9 +29,68 @@ export default {
                 [
                     new Chord(
                         [
-                            new Note("A", "quarter", "up", 0, false),
-                            new Note("B", "quarter", "up", 0, false),
-                            new Note("C", "quarter", "up", 0, false)
+                            new Note("A", "half", "up", 0, false),
+                            new Note("B", "half", "up", 0, false),
+                            new Note("C", "half", "up", 0, false),
+                            new Note("D", "half", "up", 0, false),
+                            new Note("E", "half", "up", 0, false),
+                            new Note("F", "half", "up", 0, false),
+                            new Note("G", "half", "up", 0, false),
+                            new Note("E", "half", "up", 1, false),
+                            new Note("F", "half", "up", 1, false)
+                        ]
+                    ),
+                    new Chord(
+                        [
+                            new Note("E", "whole", "up", 0, false),
+                            new Note("F", "whole", "up", 0, false),
+                            new Note("G", "whole", "up", 0, false)
+                        ]
+                    ),
+                    new Chord(
+                        [
+                            new Note("E", "quarter", "up", 0, false),
+                            new Note("F", "quarter", "up", 0, false),
+                            new Note("G", "quarter", "up", 0, false)
+                        ]
+                    ),
+                    new Chord(
+                        [
+                            new Note("E", "quarter", "up", 0, false),
+                            new Note("F", "quarter", "up", 0, false),
+                            new Note("G", "eighth", "up", 0, false)
+                        ]
+                    ),
+                    new Chord(
+                        [
+                            new Note("E", "quarter", "up", 0, false),
+                            new Note("F", "quarter", "up", 0, false),
+                            new Note("G", "sixteenth", "up", 0, false)
+                        ]
+                    ),
+                    new Chord(
+                        [
+                            new Note("E", "quarter", "up", 0, false),
+                            new Note("F", "quarter", "up", 0, false),
+                            new Note("G", "quarter", "up", 0, false)
+                        ]
+                    ),
+                    new Chord(
+                        [
+                            new Note("E", "quarter", "up", 0, false),
+                            new Note("F", "quarter", "up", 0, false),
+                            new Note("G", "quarter", "up", 0, false)
+                        ]
+                    )
+                ]
+            ),
+            new Beat(
+                [
+                    new Chord(
+                        [
+                            new Note("A", "half", "up", 0, false),
+                            new Note("B", "half", "up", 0, false),
+                            new Note("C", "half", "up", 0, false)
                         ]
                     ),
                     new Chord(

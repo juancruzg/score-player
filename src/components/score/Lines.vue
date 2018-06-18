@@ -78,12 +78,41 @@ export default {
 
 .note::after {
     content: '';
-    top: -2px;
-    width: 100%;
     position: absolute;
-    width: 20px;
-    height: 5px;
-    border: 1px solid black;
+    font-family: "MusiSync";
+    font-size: 50px;
+    top: -54.5px;
 }
 
+/* Figures */
+
+@font-face {
+    font-family:"MusiSync";
+    src:url("./../../assets/fonts/MusiSync.eot?") format("eot"),
+    url("./../../assets/fonts/MusiSync.woff") format("woff"),
+    url("./../../assets/fonts/MusiSync.ttf") format("truetype"),
+    url("./../../assets/fonts/MusiSync.svg#MusiSync") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+.note.whole::after {
+    content: 'w';
+}
+
+.note.half::after {
+    content: 'h';
+}
+
+.note.quarter::after {
+    content: 'q';
+}
+
+.note.eighth::after {
+    content: 'e';
+}
+
+.note.sixteenth::after {
+    content: 's';
+}
 </style>
