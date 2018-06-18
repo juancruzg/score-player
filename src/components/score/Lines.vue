@@ -78,11 +78,11 @@ export default {
 
 .note::after {
     content: '';
-    top: -10px;
+    top: -2px;
     width: 100%;
     position: absolute;
     width: 20px;
-    height: 20px;
+    height: 5px;
     border: 1px solid black;
 }
 
